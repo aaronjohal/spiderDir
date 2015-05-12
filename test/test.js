@@ -20,24 +20,10 @@ var resultsApache = spider.process(url, apacheInclude);
 var resultsHello = spider.process(url, 'helloworld');
 
 
-function assertDeepEquals(var1, var2) {
-    for (var i = 0; i < var1.length; i++) {
-        if (var1[i] != var2[i]) {
-            throw new Error('something bad happened');
-        }
-
-
-    }
-    console.log('success');
-
-}
-
-
-
 function assertDir(dir1, dir2) {
 
-    if (dir1.length == dir2.length && dir1.every(function(u, i) {
-            return u === dir2[i];
+    if (dir1.length == dir2.length && dir1.every(function(content, index) {
+            return content === dir2[index];
         })) {
         console.log('success');
     } else {

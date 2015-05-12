@@ -18,11 +18,7 @@ module.exports = function() {
             var fileContents = fs.readFileSync(file, {
                 encoding: 'utf8'
             })
-            if (fileContents.indexOf(keyword) > -1) {
-                return true;
-            } else {
-                return false;
-            }
+           return (fileContents.indexOf(keyword) > -1) 
         };
 
 
@@ -32,7 +28,9 @@ module.exports = function() {
             var foundFiles = [];
             var files = fs.readdirSync(url);
 
-            for (var i = 0; i < files.length; i++) {
+            var i,   var filesLength = files.length;
+
+            for (i = 0; i < filesLength; i++) {
                 if (contains(url + '/' + files[i], keyword)) {
                     foundFiles.push(files[i]);
                 };
@@ -55,8 +53,7 @@ module.exports = function() {
                     //something unrelated went wrong, rethrow
                     throw err;
                 }
-            }
-            
+            }         
             files.forEach(function(fileName) {
 
                 if (contains(fileName, keyword)) {
