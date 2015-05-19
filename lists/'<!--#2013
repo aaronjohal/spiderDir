@@ -1,0 +1,16 @@
+yndicate.inc
+/private/tmp/mounts/live/wwwlive/news/special/2013/newsspec_4687/inc/syndicate/syndicate.stm
+fs.js:568
+  function strWrapper(err, written) {
+                ^
+Error: ENOENT, no such file or directory '/private/tmp/mounts/live/wwwlive/news/special/2013/newsspec_4687/js/vendor'
+    at Error (native)
+    at Object.fs.openSync (fs.js:502:18)
+    at Object.fs.readFileSync (fs.js:354:15)
+    at contains (/Users/johala02/Documents/VisualJournalism/nodeJs/lib/spider.js:19:35)
+    at /Users/johala02/Documents/VisualJournalism/nodeJs/lib/spider.js:59:19
+    at Array.forEach (native)
+    at recursiveLevelSearch (/Users/johala02/Documents/VisualJournalism/nodeJs/lib/spider.js:58:19)
+    at process (/Users/johala02/Documents/VisualJournalism/nodeJs/lib/spider.js:15:20)
+    at Object.<anonymous> (/Users/johala02/Documents/VisualJournalism/nodeJs/bin/spider.js:4:22)
+    at Module._compile (module.js:460:26)

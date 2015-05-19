@@ -14,7 +14,7 @@ var fixtureDirectory2 = ['fixtureData/fixtureData2/test3.inc',
 
 
 
-var spider = require('../spider')();
+var spider = require('../lib/spider')();
 
 var resultsApache = spider.process(url, apacheInclude);
 var resultsHello = spider.process(url, 'helloworld');
